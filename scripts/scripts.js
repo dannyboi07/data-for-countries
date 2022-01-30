@@ -160,9 +160,11 @@ async function displayResults() {
     };
 };
 
+const weather_api_key="d0e4305b70a8e2aad5b173f466b27785";
+
 /* Makes a req to another API provided by OpenWeatherMap for weather on city data gained from RestContries.com, returns temperature
    returns temperatures, weather icon url, wind speed and wind degree in an array*/
-async function getTemps(capital) { // You have to provide your own api key from OpenWeatherMap
+async function getTemps(capital) { 
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&units=metric&appid=${weather_api_key}`;
     
     try {
